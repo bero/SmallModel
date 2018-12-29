@@ -1,0 +1,7 @@
+*.exe
+*.local
+*.res
+*.dcu
+*.skincfg
+*.dsk
+*.identcache
