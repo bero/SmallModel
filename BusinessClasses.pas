@@ -14,16 +14,123 @@
 
 unit BusinessClasses;
 
-{$DEFINE BusinessClasses_unitheader}
-{$INCLUDE BusinessClasses_Interface.inc}
+{$INCLUDE Attracs.inc} //PATCH
 
-{ Includefile for methodimplementations }
+interface
 
+uses
+  BoldSystem,
+  SmallInterfaces;
+
+type
+  TBusinessClassesRoot = class(TBoldObject)
+  private
+  protected
+  public
+  end;
+
+{$IFDEF UseBoldListEnumerator}
+  TBusinessClassesRootListEnumerator = class(TBoldObjectListEnumerator)
+  public
+    function GetCurrent: TBusinessClassesRoot;
+    property Current: TBusinessClassesRoot read GetCurrent;
+  end;
+{$ENDIF UseBoldListEnumerator}
+
+  TBusinessClassesRootList = class(TBoldObjectList)
+  protected
+    function GetBoldObject(index: Integer): TBusinessClassesRoot;
+    procedure SetBoldObject(index: Integer; NewObject: TBusinessClassesRoot);
+  public
+{$IFDEF UseBoldListEnumerator}
+    function GetEnumerator: TBusinessClassesRootListEnumerator;
+{$ENDIF UseBoldListEnumerator}
+    function Includes(anObject: TBusinessClassesRoot): Boolean;
+    function IndexOf(anObject: TBusinessClassesRoot): Integer;
+    procedure Add(NewObject: TBusinessClassesRoot);
+    function AddNew: TBusinessClassesRoot;
+    procedure Insert(index: Integer; NewObject: TBusinessClassesRoot);
+    property BoldObjects[index: Integer]: TBusinessClassesRoot read GetBoldObject write SetBoldObject; default;
+  end;
+
+{$IFDEF UseBoldListEnumerator}
+  TClassAListEnumerator = class(TBoldObjectListEnumerator)
+  public
+    function GetCurrent: IClassA;
+    property Current: IClassA read GetCurrent;
+  end;
+{$ENDIF UseBoldListEnumerator}
+
+  TClassAList = class(TBusinessClassesRootList)
+  protected
+    function GetBoldObject(index: Integer): IClassA;
+    procedure SetBoldObject(index: Integer; NewObject: IClassA);
+  public
+{$IFDEF UseBoldListEnumerator}
+    function GetEnumerator: TClassAListEnumerator;
+{$ENDIF UseBoldListEnumerator}
+    function Includes(anObject: IClassA): Boolean;
+    function IndexOf(anObject: IClassA): Integer;
+    procedure Add(NewObject: IClassA);
+    function AddNew: IClassA;
+    procedure Insert(index: Integer; NewObject: IClassA);
+    property BoldObjects[index: Integer]: IClassA read GetBoldObject write SetBoldObject; default;
+  end;
+
+{$IFDEF UseBoldListEnumerator}
+  TClassBListEnumerator = class(TBoldObjectListEnumerator)
+  public
+    function GetCurrent: IClassB;
+    property Current: IClassB read GetCurrent;
+  end;
+{$ENDIF UseBoldListEnumerator}
+
+  TClassBList = class(TBusinessClassesRootList)
+  protected
+    function GetBoldObject(index: Integer): IClassB;
+    procedure SetBoldObject(index: Integer; NewObject: IClassB);
+  public
+{$IFDEF UseBoldListEnumerator}
+    function GetEnumerator: TClassBListEnumerator;
+{$ENDIF UseBoldListEnumerator}
+    function Includes(anObject: IClassB): Boolean;
+    function IndexOf(anObject: IClassB): Integer;
+    procedure Add(NewObject: IClassB);
+    function AddNew: IClassB;
+    procedure Insert(index: Integer; NewObject: IClassB);
+    property BoldObjects[index: Integer]: IClassB read GetBoldObject write SetBoldObject; default;
+  end;
+
+{$IFDEF UseBoldListEnumerator}
+  TClassBClassAListEnumerator = class(TBoldObjectListEnumerator)
+  public
+    function GetCurrent: IClassBClassA;
+    property Current: IClassBClassA read GetCurrent;
+  end;
+{$ENDIF UseBoldListEnumerator}
+
+  TClassBClassAList = class(TBusinessClassesRootList)
+  protected
+    function GetBoldObject(index: Integer): IClassBClassA;
+    procedure SetBoldObject(index: Integer; NewObject: IClassBClassA);
+  public
+{$IFDEF UseBoldListEnumerator}
+    function GetEnumerator: TClassBClassAListEnumerator;
+{$ENDIF UseBoldListEnumerator}
+    function Includes(anObject: IClassBClassA): Boolean;
+    function IndexOf(anObject: IClassBClassA): Integer;
+    procedure Add(NewObject: IClassBClassA);
+    function AddNew: IClassBClassA;
+    procedure Insert(index: Integer; NewObject: IClassBClassA);
+    property BoldObjects[index: Integer]: IClassBClassA read GetBoldObject write SetBoldObject; default;
+  end;
 
 const
   BoldMemberAssertInvalidObjectType: string = 'Object of singlelink (%s.%s) is of wrong type (is %s, should be %s)';
 
 { TBusinessClassesRoot }
+
+implementation
 
 procedure TBusinessClassesRootList.Add(NewObject: TBusinessClassesRoot);
 begin
@@ -74,59 +181,18 @@ begin
 end;
 {$ENDIF UseBoldListEnumerator}
 
-{ TClassA }
-
-function TClassA._Get_M_name: TBAString;
-begin
-  assert(ValidateMember('TClassA', 'name', 0, TBAString));
-  Result := TBAString(BoldMembers[0]);
-end;
-
-function TClassA._Getname: String;
-begin
-  Result := M_name.AsString;
-end;
-
-procedure TClassA._Setname(const NewValue: String);
-begin
-  M_name.AsString := NewValue;
-end;
-
-function TClassA._Get_M_price: TBACurrency;
-begin
-  assert(ValidateMember('TClassA', 'price', 1, TBACurrency));
-  Result := TBACurrency(BoldMembers[1]);
-end;
-
-function TClassA._Getprice: Currency;
-begin
-  Result := M_price.AsCurrency;
-end;
-
-function TClassA._GetClassBs: TClassBList;
-begin
-  assert(ValidateMember('TClassA', 'ClassBs', 2, TClassBList));
-  Result := TClassBList(BoldMembers[2]);
-end;
-
-function TClassA._GetClassBClassA: TClassBClassAList;
-begin
-  assert(ValidateMember('TClassA', 'ClassBClassA', 3, TClassBClassAList));
-  Result := TClassBClassAList(BoldMembers[3]);
-end;
-
-procedure TClassAList.Add(NewObject: TClassA);
+procedure TClassAList.Add(NewObject: IClassA);
 begin
   if Assigned(NewObject) then
     AddElement(NewObject);
 end;
 
-function TClassAList.IndexOf(anObject: TClassA): Integer;
+function TClassAList.IndexOf(anObject: IClassA): Integer;
 begin
   result := IndexOfElement(anObject);
 end;
 
-function TClassAList.Includes(anObject: TClassA) : Boolean;
+function TClassAList.Includes(anObject: IClassA) : Boolean;
 begin
   result := IncludesElement(anObject);
 end;
