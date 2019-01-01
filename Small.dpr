@@ -5,8 +5,8 @@ uses
   SmallForm in 'SmallForm.pas' {Form13},
   BusinessClasses in 'BusinessClasses.pas',
   SmallModel in 'SmallModel.pas' {dmAttracsModel: TDataModule},
-  SmallInterfaces in 'SmallInterfaces.pas',
-  ClassA in 'ClassA.pas';
+  TestA in 'TestA.pas',
+  TestB in 'TestB.pas';
 
 {$R *.res}
 
