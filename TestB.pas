@@ -8,7 +8,7 @@ uses
 type
   TTestB = class(TAbstractTestB)
   public
-    M_TestA: TAbstractTestA;
+    TestA: TAbstractTestA;
     constructor Create;
   end;
 

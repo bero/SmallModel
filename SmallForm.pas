@@ -28,13 +28,18 @@ uses
 
 procedure TForm13.FormActivate(Sender: TObject);
 var
-  v: TTestA;
+  a: TTestA;
   b: TTestB;
 begin
-  v := TTestA.Create;
+  a := TTestA.Create;
   b := TTestB.Create;
-  v.M_TestB := b;
-  b.M_TestA := v;
+  try
+    a.TestB := b;
+    b.TestA := a;
+  finally
+    a.Free;
+    b.Free;
+  end;
 end;
 
 end.
