@@ -8,6 +8,7 @@ uses
 
 type
   TForm13 = class(TForm)
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -19,6 +20,21 @@ var
 
 implementation
 
+uses
+  TestA,
+  TestB;
+
 {$R *.dfm}
+
+procedure TForm13.FormActivate(Sender: TObject);
+var
+  v: TTestA;
+  b: TTestB;
+begin
+  v := TTestA.Create;
+  b := TTestB.Create;
+  v.M_TestB := b;
+  b.M_TestA := v;
+end;
 
 end.

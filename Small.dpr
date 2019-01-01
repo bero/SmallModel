@@ -3,10 +3,10 @@ program Small;
 uses
   Forms,
   SmallForm in 'SmallForm.pas' {Form13},
-  BusinessClasses in 'BusinessClasses.pas',
   SmallModel in 'SmallModel.pas' {dmAttracsModel: TDataModule},
   TestA in 'TestA.pas',
-  TestB in 'TestB.pas';
+  TestB in 'TestB.pas',
+  AbstractClass in 'AbstractClass.pas';
 
 {$R *.res}
 

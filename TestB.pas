@@ -3,19 +3,22 @@ unit TestB;
 interface
 
 uses
-  TestA;
+  AbstractClass;
 
 type
-  TAbstractTestB = class
-  public
-    procedure TestA; virtual; abstract;
-  end;
-
   TTestB = class(TAbstractTestB)
   public
     M_TestA: TAbstractTestA;
+    constructor Create;
   end;
 
 implementation
+
+{ TTestB }
+
+constructor TTestB.Create;
+begin
+
+end;
 
 end.
