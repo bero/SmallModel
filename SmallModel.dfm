@@ -19,11 +19,12 @@ object dmAttracsModel: TdmAttracsModel
       #9'""'
       #9'""'
       
-        #9'"_BoldInternal.toolId=4F59B45200D5,_Boldify.boldified=True,_Bol' +
-        'dInternal.flattened=True,_BoldInternal.ModelErrors=,Bold.DelphiN' +
-        'ame=<Name>,Bold.RootClass=BusinessClassesRoot,Bold.UseXFiles=Fal' +
-        'se,Bold.UseGlobalId=False,Bold.UseReadOnly=False,Bold.UseClockLo' +
-        'g=False"'
+        #9'"_BoldInternal.toolId=4F59B45200D5,_BoldInternal.flattened=True' +
+        ',\"_BoldInternal.ModelErrors=\"\"Multi to multi association \"\"' +
+        '\"\"TestATestB\"\"\"\" must have association class\"\"\",_Boldif' +
+        'y.boldified=True,Bold.DelphiName=<Name>,Bold.RootClass=BusinessC' +
+        'lassesRoot,Bold.UseXFiles=False,Bold.UseGlobalId=False,Bold.UseR' +
+        'eadOnly=False,Bold.UseClockLog=False"'
       #9'(Classes'
       #9#9'(Class'
       #9#9#9'"BusinessClassesRoot"'
@@ -33,17 +34,17 @@ object dmAttracsModel: TdmAttracsModel
       #9#9#9'""'
       #9#9#9'""'
       
-        #9#9#9'"persistence=persistent,_Boldify.autoCreated=True,_Boldify.no' +
-        'Name=True,Bold.TableName=<Prefix>_OBJECT"'
+        #9#9#9'"persistence=persistent,_Boldify.autoCreated=True,Bold.TableN' +
+        'ame=<Prefix>_OBJECT"'
       #9#9#9'(Attributes'
       #9#9#9')'
       #9#9#9'(Methods'
       #9#9#9')'
       #9#9')'
       #9#9'(Class'
-      #9#9#9'"ClassA"'
-      #9#9#9'"BusinessClassesRoot"'
-      #9#9#9'FALSE'
+      #9#9#9'"TestA"'
+      #9#9#9'"AbstractTestA"'
+      #9#9#9'TRUE'
       #9#9#9'FALSE'
       #9#9#9'""'
       #9#9#9'""'
@@ -51,84 +52,73 @@ object dmAttracsModel: TdmAttracsModel
         #9#9#9'"_BoldInternal.toolId=4F59B45D0095,Neo.FriendlyName=,Neo.Crea' +
         'teConstraints=,Neo.AccessConstraints=false,Neo.AccessExecuteCons' +
         'traints=,Neo.AccessWriteConstraints=,Neo.AccessWriteDeleteConstr' +
-        'aints=,Attracs.FreezeAttribute=,persistence=transient"'
+        'aints=,Attracs.FreezeAttribute=,persistence=persistent"'
+      #9#9#9'(Attributes'
+      #9#9#9')'
+      #9#9#9'(Methods'
+      #9#9#9')'
+      #9#9')'
+      #9#9'(Class'
+      #9#9#9'"AbstractTestA"'
+      #9#9#9'"BusinessClassesRoot"'
+      #9#9#9'FALSE'
+      #9#9#9'TRUE'
+      #9#9#9'""'
+      #9#9#9'""'
+      #9#9#9'"persistence=transient"'
       #9#9#9'(Attributes'
       #9#9#9#9'(Attribute'
-      #9#9#9#9#9'"name"'
-      #9#9#9#9#9'""'
+      #9#9#9#9#9'"price"'
+      #9#9#9#9#9'"Float"'
       #9#9#9#9#9'FALSE'
       #9#9#9#9#9'""'
       #9#9#9#9#9'""'
-      #9#9#9#9#9'0'
+      #9#9#9#9#9'2'
       #9#9#9#9#9'""'
       
-        #9#9#9#9#9'"_BoldInternal.toolId=4F59B4B2018F,persistence=persistent,\' +
+        #9#9#9#9#9'"_BoldInternal.toolId=4F59B4B6027A,persistence=persistent,\' +
         '"Neo.NeoAttrXMLSerialiseModeSet=XMLElement, XMLAttribute, Text, ' +
         'None\",Neo.FriendlyName=,Neo.XMLSerialiseMode=XMLElement,Neo.Acc' +
         'essConstraints=,Neo.AccessWriteConstraints=,Attracs.FreezeAttrib' +
-        'ute=,Attracs.SpanExpression=,derived=False,Bold.AllowNULL=True"'
-      #9#9#9#9')'
-      #9#9#9#9'(Attribute'
-      #9#9#9#9#9'"price"'
-      #9#9#9#9#9'"Currency"'
-      #9#9#9#9#9'TRUE'
-      #9#9#9#9#9'""'
-      #9#9#9#9#9'""'
-      #9#9#9#9#9'0'
-      #9#9#9#9#9'""'
-      
-        #9#9#9#9#9'"_BoldInternal.toolId=4F59B4B6027A,persistence=transient,\"' +
-        'Neo.NeoAttrXMLSerialiseModeSet=XMLElement, XMLAttribute, Text, N' +
-        'one\",Neo.FriendlyName=,Neo.XMLSerialiseMode=XMLElement,Neo.Acce' +
-        'ssConstraints=,Neo.AccessWriteConstraints=,Attracs.FreezeAttribu' +
-        'te=,Attracs.SpanExpression=,derived=True,Bold.AllowNULL=True,Bol' +
-        'd.DerivationOCL=classBs.price->sum"'
+        'ute=,Attracs.SpanExpression=,derived=False,Bold.DerivationOCL=cl' +
+        'assBs.price->sum"'
       #9#9#9#9')'
       #9#9#9')'
       #9#9#9'(Methods'
       #9#9#9')'
       #9#9')'
       #9#9'(Class'
-      #9#9#9'"ClassB"'
-      #9#9#9'"BusinessClassesRoot"'
-      #9#9#9'FALSE'
+      #9#9#9'"TestB"'
+      #9#9#9'"AbstractTestB"'
+      #9#9#9'TRUE'
       #9#9#9'FALSE'
       #9#9#9'""'
       #9#9#9'""'
-      
-        #9#9#9'"_BoldInternal.toolId=4F59B46300E3,Neo.FriendlyName=,Neo.Crea' +
-        'teConstraints=,Neo.AccessConstraints=false,Neo.AccessExecuteCons' +
-        'traints=,Neo.AccessWriteConstraints=,Neo.AccessWriteDeleteConstr' +
-        'aints=,Attracs.FreezeAttribute=,persistence=transient"'
+      #9#9#9'"persistence=persistent"'
       #9#9#9'(Attributes'
-      #9#9#9#9'(Attribute'
-      #9#9#9#9#9'"price"'
-      #9#9#9#9#9'"Currency"'
-      #9#9#9#9#9'FALSE'
-      #9#9#9#9#9'""'
-      #9#9#9#9#9'""'
-      #9#9#9#9#9'0'
-      #9#9#9#9#9'""'
-      
-        #9#9#9#9#9'"_BoldInternal.toolId=4F59B4C10131,persistence=persistent,\' +
-        '"Neo.NeoAttrXMLSerialiseModeSet=XMLElement, XMLAttribute, Text, ' +
-        'None\",Neo.FriendlyName=,Neo.XMLSerialiseMode=XMLElement,Neo.Acc' +
-        'essConstraints=,Neo.AccessWriteConstraints=,Attracs.FreezeAttrib' +
-        'ute=,Attracs.SpanExpression=,derived=False,Bold.AllowNULL=True"'
-      #9#9#9#9')'
       #9#9#9')'
       #9#9#9'(Methods'
       #9#9#9')'
       #9#9')'
       #9#9'(Class'
-      #9#9#9'"ClassBClassA"'
+      #9#9#9'"AbstractTestB"'
       #9#9#9'"BusinessClassesRoot"'
       #9#9#9'FALSE'
-      #9#9#9'FALSE'
+      #9#9#9'TRUE'
       #9#9#9'""'
       #9#9#9'""'
-      #9#9#9'"persistence=transient,_Boldify.autoCreated=True"'
+      #9#9#9'"persistence=transient"'
       #9#9#9'(Attributes'
+      #9#9#9#9'(Attribute'
+      #9#9#9#9#9'"price"'
+      #9#9#9#9#9'"Float"'
+      #9#9#9#9#9'FALSE'
+      #9#9#9#9#9'""'
+      #9#9#9#9#9'""'
+      #9#9#9#9#9'2'
+      #9#9#9#9#9'""'
+      #9#9#9#9#9'"derived=False,persistence=persistent"'
+      #9#9#9#9')'
       #9#9#9')'
       #9#9#9'(Methods'
       #9#9#9')'
@@ -136,57 +126,40 @@ object dmAttracsModel: TdmAttracsModel
       #9')'
       #9'(Associations'
       #9#9'(Association'
-      #9#9#9'"ClassBClassA"'
-      #9#9#9'"ClassBClassA"'
+      #9#9#9'"TestATestB"'
+      #9#9#9'"<NONE>"'
       #9#9#9'""'
       #9#9#9'""'
-      
-        #9#9#9'"persistence=transient,_BoldInternal.toolId=4F59B4840160,Neo.' +
-        'FriendlyName=,derived=False,_Boldify.wasPersistent=True,_Boldify' +
-        '.noName=True,Bold.DelphiName=<Name>"'
+      #9#9#9'"derived=False,persistence=persistent,Bold.DelphiName=<Name>"'
       #9#9#9'FALSE'
       #9#9#9'(Roles'
       #9#9#9#9'(Role'
-      #9#9#9#9#9'"ClassBs"'
+      #9#9#9#9#9'"TestAs"'
       #9#9#9#9#9'TRUE'
       #9#9#9#9#9'FALSE'
-      #9#9#9#9#9'"ClassA"'
+      #9#9#9#9#9'"AbstractTestB"'
       #9#9#9#9#9'""'
-      #9#9#9#9#9'"0..n"'
+      #9#9#9#9#9'"0..*"'
       #9#9#9#9#9'""'
       #9#9#9#9#9'0'
       #9#9#9#9#9'2'
       #9#9#9#9#9'0'
-      
-        #9#9#9#9#9'"_BoldInternal.toolId=4F59B4850009,\"Neo.NeoRoleXMLSerialis' +
-        'eModeSet=XMLElement, None\",Neo.FriendlyName=,Neo.XMLSerialiseMo' +
-        'de=XMLElement,Neo.AccessConstraints=,Neo.AccessWriteConstraints=' +
-        ',Neo.AccessWriteClearConstraints=,Neo.AccessWriteInsertConstrain' +
-        'ts=,Neo.AccessWriteRemoveConstraints=,Neo.AccessWriteReplaceCons' +
-        'traints=,Neo.AccessWriteMoveConstraints=,Attracs.SpanExpression=' +
-        ',_Boldify.noName=True,Bold.Embed=False"'
+      #9#9#9#9#9'""'
       #9#9#9#9#9'(Qualifiers'
       #9#9#9#9#9')'
       #9#9#9#9')'
       #9#9#9#9'(Role'
-      #9#9#9#9#9'"ClassAs"'
+      #9#9#9#9#9'"TestBs"'
       #9#9#9#9#9'TRUE'
       #9#9#9#9#9'FALSE'
-      #9#9#9#9#9'"ClassB"'
+      #9#9#9#9#9'"AbstractTestA"'
       #9#9#9#9#9'""'
-      #9#9#9#9#9'"0..n"'
+      #9#9#9#9#9'"0..*"'
       #9#9#9#9#9'""'
       #9#9#9#9#9'0'
       #9#9#9#9#9'2'
       #9#9#9#9#9'0'
-      
-        #9#9#9#9#9'"_BoldInternal.toolId=4F59B485000B,\"Neo.NeoRoleXMLSerialis' +
-        'eModeSet=XMLElement, None\",Neo.FriendlyName=,Neo.XMLSerialiseMo' +
-        'de=XMLElement,Neo.AccessConstraints=,Neo.AccessWriteConstraints=' +
-        ',Neo.AccessWriteClearConstraints=,Neo.AccessWriteInsertConstrain' +
-        'ts=,Neo.AccessWriteRemoveConstraints=,Neo.AccessWriteReplaceCons' +
-        'traints=,Neo.AccessWriteMoveConstraints=,Attracs.SpanExpression=' +
-        ',_Boldify.noName=True,Bold.Embed=False"'
+      #9#9#9#9#9'""'
       #9#9#9#9#9'(Qualifiers'
       #9#9#9#9#9')'
       #9#9#9#9')'
